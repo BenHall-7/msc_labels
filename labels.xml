@@ -219,7 +219,7 @@
 		</syscall>
 		<syscall>
 			<id>9</id>
-			<name>RandI</name>
+			<name>randint</name>
 		</syscall>
 		<syscall>
 			<id>0xa</id>
@@ -227,39 +227,39 @@
 			<methods>
 				<method>
 					<id>0<id>
-					<name>Sqrt</name>
+					<name>sqrt</name>
 				</method>
 				<method>
 					<id>1<id>
-					<name>Atan2</name>
+					<name>atan2</name>
 				</method>
 				<method>
 					<id>2<id>
-					<name>Exp</name>
+					<name>exp</name>
 				</method>
 				<method>
 					<id>3<id>
-					<name>NormVector3</name>
+					<name>norm_vector3</name>
 				</method>
 				<method>
 					<id>4<id>
-					<name>Cos</name>
+					<name>cos</name>
 				</method>
 				<method>
 					<id>5<id>
-					<name>Sin</name>
+					<name>sin</name>
 				</method>
 				<method>
 					<id>6<id>
-					<name>RandF</name>
+					<name>randf</name>
 				</method>
 				<method>
 					<id>7<id>
-					<name>AngleDifference</name>
+					<name>angle_difference</name>
 				</method>
 				<method>
 					<id>12<id>
-					<name>NormVector2</name>
+					<name>norm_vector2</name>
 				</method>
 			</methods>
 		</syscall>
@@ -309,147 +309,147 @@
 			<methods>
 				<method>
 					<id>0x0</id>
-					<name>SetFloat</name>
+					<name>set_float</name>
 				</method>
 				<method>
 					<id>0x1</id>
-					<name>SetRandFloat</name>
+					<name>set_rand_float</name>
 				</method>
 				<method>
 					<id>0x2</id>
-					<name>AddFloat</name>
+					<name>add_float</name>
 				</method>
 				<method>
 					<id>0x3</id>
-					<name>SubtractFloat</name>
+					<name>sub_float</name>
 				</method>
 				<method>
 					<id>0x4</id>
-					<name>MultiplyFloat</name>
+					<name>mul_float</name>
 				</method>
 				<method>
 					<id>0x5</id>
-					<name>DivideFloat</name>
+					<name>div_float</name>
 				</method>
 				<method>
 					<id>0x6</id>
-					<name>GetInt</name>
+					<name>get_int</name>
 				</method>
 				<method>
 					<id>0x7</id>
-					<name>SetInt</name>
+					<name>set_int</name>
 				</method>
 				<method>
 					<id>0x8</id>
-					<name>SetRandInt</name>
+					<name>set_rand_int</name>
 				</method>
 				<method>
 					<id>0x9</id>
-					<name>IncInt</name>
+					<name>inc_int</name>
 				</method>
 				<method>
 					<id>0xa</id>
-					<name>DecInt</name>
+					<name>dec_int</name>
 				</method>
 				<method>
 					<id>0xb</id>
-					<name>AddInt</name>
+					<name>add_int</name>
 				</method>
 				<method>
 					<id>0xc</id>
-					<name>SubtractInt</name>
+					<name>sub_int</name>
 				</method>
 				<method>
 					<id>0xd</id>
-					<name>MultiplyInt</name>
+					<name>mul_int</name>
 				</method>
 				<method>
 					<id>0xe</id>
-					<name>DivideInt</name>
+					<name>div_int</name>
 				</method>
 				<method>
 					<id>0xf</id>
-					<name>CountDownInt</name>
+					<name>count_down_int</name>
 					<summary>Decrements an int variable and returns true if it reaches 0</summary>
 				</method>
 				<method>
 					<id>0x10</id>
-					<name>IsFlag</name>
+					<name>is_flag</name>
 				</method>
 				<method>
 					<id>0x11</id>
-					<name>OnFlag</name>
+					<name>on_flag</name>
 				</method>
 				<method>
 					<id>0x12</id>
-					<name>OffFlag</name>
+					<name>off_flag</name>
 				</method>
 				<method>
 					<id>0x13</id>
-					<name>SetFlag</name>
+					<name>set_flag</name>
 					<summary>Sets a flag on or off</summary>
 				</method>
 				<method>
 					<id>0x14</id>
-					<name>CheckOffFlag</name>
+					<name>check_off_flag</name>
 					<summary>Returns true if a flag is off. Else, turns the flag off and returns false</summary>
 				</method>
 				<method>
 					<id>0x15</id>
-					<name>CheckSTrans</name>
+					<name>check_strans</name>
 				</method>
 				<method>
 					<id>0x16</id>
-					<name>STransOn</name>
+					<name>strans_on</name>
 				</method>
 				<method>
 					<id>0x17</id>
-					<name>STransOff</name>
+					<name>strans_off</name>
 				</method>
 				<method>
 					<id>0x18</id>
-					<name>ClearVarGroup</name>
+					<name>clear_var_group</name>
 					<summary>Resets an entire variable group to 0</summary>
 				</method>
 				<method>
 					<id>0x19</id>
-					<name>STransGroupOn</name>
+					<name>strans_group_on</name>
 				</method>
 				<method>
 					<id>0x1a</id>
-					<name>STransGroupOff</name>
+					<name>strans_group_off</name>
 				</method>
 				<method>
 					<id>0x1c</id>
-					<name>CheckSTransGroup</name>
+					<name>check_strans_group</name>
 				</method>
 				<method>
 					<id>0x1d</id>
-					<name>DisableSTrans</name>
+					<name>disable_strans</name>
 				</method>
 				<method>
 					<id>0x1e</id>
-					<name>EnableSTrans</name>
+					<name>enable_strans</name>
 				</method>
 				<method>
 					<id>0x1f</id>
-					<name>DisableSTransGroup</name>
+					<name>disable_strans_group</name>
 				</method>
 				<method>
 					<id>0x20</id>
-					<name>EnableSTransGroup</name>
+					<name>enable_strans_group</name>
 				</method>
 				<method>
 					<id>0x2710</id>
-					<name>OnFlag2</name>
+					<name>on_flag2</name>
 				</method>
 				<method>
 					<id>0x2711</id>
-					<name>OffFlag2</name>
+					<name>off_flag2</name>
 				</method>
 				<method>
 					<id>0x2712</id>
-					<name>IsFlag2</name>
+					<name>is_flag2</name>
 				</method>
 			</methods>
 		</syscall>
@@ -459,7 +459,7 @@
 			<methods>
 				<method>
 					<id>0x0</id>
-					<name>GetFloat</name>
+					<name>get_float</name>
 				</method>
 			</methods>
 		</syscall>

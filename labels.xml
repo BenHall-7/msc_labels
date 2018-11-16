@@ -56,6 +56,18 @@
 	</globals>
 	<functions>
 		<function>
+			<id>38</id>
+			<name>sub_wait_ground_check_common_pre</name>
+		</function>
+		<function>
+			<id>39</id>
+			<name>sub_wait_ground_check_common</name>
+		</function>
+		<function>
+			<id>40</id>
+			<name>sub_air_check_fall_common_pre</name>
+		</function>
+		<function>
 			<id>41</id>
 			<name>sub_check_enable_transition</name>
 		</function>
@@ -108,6 +120,18 @@
 			<name>sub_shift_status_main</name>
 		</function>
 		<function>
+			<id>79</id>
+			<name>sub_fighter_change_status</name>
+		</function>
+		<function>
+			<id>82</id>
+			<name>sub_fighter_line_status_system</name>
+		</function>
+		<function>
+			<id>107</id>
+			<name>sub_fighter_change_motion_customize</name>
+		</function>
+		<function>
 			<id>112</id>
 			<name>sub_set_status_line_msc_common_table</name>
 		</function>
@@ -144,11 +168,55 @@
 			<name>sub_set_fix_camera_msc_common_table</name>
 		</function>
 		<function>
+			<id>182</id>
+			<name>sub_cliff_robbed_uniq</name>
+		</function>
+		<function>
+			<id>203</id>
+			<name>sub_cliff_catch_move_uniq_process_init</name>
+		</function>
+		<function>
+			<id>204</id>
+			<name>sub_cliff_catch_move_uniq_process_init_common</name>
+		</function>
+		<function>
+			<id>310</id>
+			<name>sub_attack_air_common</name>
+		</function>
+		<function>
+			<id>311</id>
+			<name>sub_attack_air_kind_set_log_info</name>
+		</function>
+		<function>
+			<id>455</id>
+			<name>sub_ftStatusUniqProcessGuardFunc_updateShield</name>
+		</function>
+		<function>
+			<id>456</id>
+			<name>sub_ftStatusUniqProcessGuardFunc_setShieldScale</name>
+		</function>
+		<function>
 			<id>487</id>
 			<name>status_JumpSquat</name>
 		</function>
+		<function>
+			<id>574</id>
+			<name>status_ItemScrewJumpAerialSub</name>
+		</function>
+		<function>
+			<id>773</id>
+			<name>set_walk_motion</name>
+		</function>
 	</functions>
 	<syscalls>
+		<syscall>
+			<id>2</id>
+			<name>sv_module_access_link</name>
+		</syscall>
+		<syscall>
+			<id>3</id>
+			<name>sv_set_mem</name>
+		</syscall>
 		<syscall>
 			<id>9</id>
 			<name>RandI</name>
@@ -194,6 +262,46 @@
 					<name>NormVector2</name>
 				</method>
 			</methods>
+		</syscall>
+		<syscall>
+			<id>0xc</id>
+			<name>FighterUtil</name>
+		</syscall>
+		<syscall>
+			<id>0xd</id>
+			<name>CameraModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0xe</id>
+			<name>ControlModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0xf</id>
+			<name>ControlModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x10</id>
+			<name>KineticModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x11</id>
+			<name>KineticModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x12</id>
+			<name>MotionModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x13</id>
+			<name>MotionModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x14</id>
+			<name>PostureModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x15</id>
+			<name>PostureModuleImplFloat</name>
 		</syscall>
 		<syscall>
 			<id>0x16</id>
@@ -354,6 +462,154 @@
 					<name>GetFloat</name>
 				</method>
 			</methods>
+		</syscall>
+		<syscall>
+			<id>0x18</id>
+			<name>StatusModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x19</id>
+			<name>SlopeModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x1a</id>
+			<name>GroundModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x1b</id>
+			<name>GroundModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x1c</id>
+			<name>EffectModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x1d</id>
+			<name>EffectModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x1e</id>
+			<name>SoundModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x20</id>
+			<name>ArticleModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x23</id>
+			<name>CancelModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x24</id>
+			<name>DamageModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x25</id>
+			<name>DamageModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x26</id>
+			<name>ComboModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x27</id>
+			<name>ModelModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x28</id>
+			<name>ModelModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x29</id>
+			<name>JostleModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x2a</id>
+			<name>LinkModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x2b</id>
+			<name>LinkModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x2c</id>
+			<name>StageData</name>
+		</syscall>
+		<syscall>
+			<id>0x2d</id>
+			<name>HitModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x2e</id>
+			<name>AttackModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x2f</id>
+			<name>AttackModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x30</id>
+			<name>StopModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x33</id>
+			<name>BattleObjectParam</name>
+		</syscall>
+		<syscall>
+			<id>0x34</id>
+			<name>BattleObjectParamFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x36</id>
+			<name>ShieldModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x37</id>
+			<name>TurnModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x39</id>
+			<name>VisibilityModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x3c</id>
+			<name>CaptureModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x3d</id>
+			<name>CaptureModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x3e</id>
+			<name>ItemModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x3f</id>
+			<name>ItemModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x41</id>
+			<name>SoundModuleImplFloat</name>
+		</syscall>
+		<syscall>
+			<id>0x42</id>
+			<name>ColorBlendModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x44</id>
+			<name>PhysicsModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x46</id>
+			<name>AudienceManager</name>
+		</syscall>
+		<syscall>
+			<id>0x48</id>
+			<name>ShakeModuleImpl</name>
+		</syscall>
+		<syscall>
+			<id>0x4a</id>
+			<name>ShadowModuleImpl</name>
 		</syscall>
 	</syscalls>
 </labels>

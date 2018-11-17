@@ -454,10 +454,62 @@
 		<syscall>
 			<id>0x14</id>
 			<name>PostureModuleImpl</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>set_lr</name>
+				</method>
+				<method>
+					<id>1</id>
+					<name>reverse_lr</name>
+				</method>
+				<method>
+					<id>2</id>
+					<name>update_rot_y</name>
+				</method>
+				<method>
+					<id>3</id>
+					<name>set_pos</name>
+				</method>
+				<method>
+					<id>4</id>
+					<name>set_rot</name>
+				</method>
+				<method>
+					<id>5</id>
+					<name>set_stick_lr</name>
+				</method>
+				<method>
+					<id>2713</id>
+					<name>set_scale</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x15</id>
 			<name>PostureModuleImplFloat</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>get_lr</name>
+				</method>
+				<method>
+					<id>1</id>
+					<name>get_pos_x</name>
+				</method>
+				<method>
+					<id>2</id>
+					<name>get_pos_y</name>
+				</method>
+				<method>
+					<id>3</id>
+					<name>get_pos_z</name>
+				</method>
+				<method>
+					<id>7</id>
+					<name>get_scale</name>
+				</method>
+			</method>
 		</syscall>
 		<syscall>
 			<id>0x16</id>

@@ -374,7 +374,7 @@
 					<name>set_controller_accel_mul</name>
 				</method>
 				<method>
-					<id>0x16</id>
+					<id>0x17</id>
 					<name>set_controller_accel_add</name>
 				</method>
 				<method>

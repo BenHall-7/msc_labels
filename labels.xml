@@ -296,6 +296,40 @@
 		<syscall>
 			<id>0xf</id>
 			<name>ControlModuleImplFloat</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>get_stick_x</name>
+				</method>
+				<method>
+					<id>1</id>
+					<name>get_stick_y</name>
+				</method>
+				<method>
+					<id>2</id>
+					<name>get_stick_prev_x</name>
+				</method>
+				<method>
+					<id>3</id>
+					<name>get_stick_prev_y</name>
+				</method>
+				<method>
+					<id>4</id>
+					<name>get_stick_angle</name>
+				</method>
+				<method>
+					<id>5</id>
+					<name>get_clatter</name>
+				</method>
+				<method>
+					<id>7</id>
+					<name>get_stick_x_unlimit</name>
+				</method>
+				<method>
+					<id>8</id>
+					<name>get_stick_y_unlimit</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x10</id>
@@ -464,10 +498,74 @@
 		<syscall>
 			<id>0x12</id>
 			<name>MotionModuleImpl</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>get_end_frame</name>
+				</method>
+				<method>
+					<id>3</id>
+					<name>change_motion</name>
+				</method>
+				<method>
+					<id>4</id>
+					<name>set_motion_rate</name>
+				</method>
+				<method>
+					<id>7</id>
+					<name>get_motion</name>
+				</method>
+				<method>
+					<id>8</id>
+					<name>add_2nd_motion</name>
+				</method>
+				<method>
+					<id>9</id>
+					<name>remove_2nd_motion</name>
+				</method>
+				<method>
+					<id>0xa</id>
+					<name>set_weight_rate</name>
+				</method>
+				<method>
+					<id>0xc</id>
+					<name>is_exist</name>
+				</method>
+				<method>
+					<id>0x1b</id>
+					<name>turn_back</name>
+				</method>
+				<method>
+					<id>0x34</id>
+					<name>set_2nd_frame</name>
+				</method>
+				<method>
+					<id>0x2712</id>
+					<name>is_end</name>
+				</method>
+				<method>
+					<id>0x2713</id>
+					<name>set_frame</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x13</id>
 			<name>MotionModuleImplFloat</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>get_transn_translate_end_frame</name>
+				</method>
+				<method>
+					<id>1</id>
+					<name>get_frame</name>
+				</method>
+				<method>
+					<id>2</id>
+					<name>get_prev_weight</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x14</id>

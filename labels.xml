@@ -266,6 +266,24 @@
 		<syscall>
 			<id>0xc</id>
 			<name>FighterUtil</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>is_body_up</name>
+				</method>
+				<method>
+					<id>2</id>
+					<name>check_cloud_through_out</name>
+				</method>
+				<method>
+					<id>3</id>
+					<name>adjust_wall</name>
+				</method>
+				<method>
+					<id>0x1e</id>
+					<name>is_hammer_status</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0xd</id>
@@ -810,6 +828,12 @@
 		<syscall>
 			<id>0x46</id>
 			<name>AudienceManager</name>
+			<methods>
+				<method>
+					<id>0x1</id>
+					<name>check_tumult_fall_special</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x48</id>

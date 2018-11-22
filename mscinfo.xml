@@ -211,7 +211,7 @@
 	<syscalls>
 		<syscall>
 			<id>2</id>
-			<name>sv_module_access_link</name>
+			<name>sv_get_mem</name>
 		</syscall>
 		<syscall>
 			<id>3</id>

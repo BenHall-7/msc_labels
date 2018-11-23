@@ -716,7 +716,7 @@
 				<method>
 					<id>0x14</id>
 					<name>check_off_flag</name>
-					<summary>Returns true if a flag is off. Else, turns the flag off and returns false</summary>
+					<summary>Returns if a flag is on; if so, sets the flag to off</summary>
 				</method>
 				<method>
 					<id>0x15</id>
@@ -732,7 +732,7 @@
 				</method>
 				<method>
 					<id>0x18</id>
-					<name>clear_var_group</name>
+					<name>clear_all</name>
 					<summary>Resets an entire variable group to 0</summary>
 				</method>
 				<method>

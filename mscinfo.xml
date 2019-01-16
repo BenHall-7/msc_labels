@@ -596,7 +596,7 @@
 					<name>set_stick_lr</name>
 				</method>
 				<method>
-					<id>2713</id>
+					<id>0x2713</id>
 					<name>set_scale</name>
 				</method>
 			</methods>
@@ -818,14 +818,55 @@
 		<syscall>
 			<id>0x20</id>
 			<name>ArticleModuleImpl</name>
+			<methods>
+				<method>
+					<id>0x2710</id>
+					<name>generate</name>
+				</method>
+				<method>
+					<id>0x2712</id>
+					<name>remove</name>
+				</method>
+				<method>
+					<id>0x2717</id>
+					<name>is_exist</name>
+				</method>
+				<method>
+					<id>0x2719</id>
+					<name>shoot</name>
+				</method>
+				<method>
+					<id>0x2727</id>
+					<name>is_generatable</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x23</id>
 			<name>CancelModuleImpl</name>
+			<methods>
+				<method>
+					<id>0x2710</id>
+					<name>enable_cancel</name>
+				</method>
+				<method>
+					<id>0x2711</id>
+					<name>disable_cancel</name>
+				</method>
+				<method>
+					<id>0x2713</id>
+					<name>is_cancelable</name>
+				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x24</id>
 			<name>DamageModuleImpl</name>
+			<methods>
+				<method>
+					<id>0</id>
+					<name>get_damage_level</name>
+				</method>
 		</syscall>
 		<syscall>
 			<id>0x25</id>

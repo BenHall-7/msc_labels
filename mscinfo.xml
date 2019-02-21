@@ -867,6 +867,7 @@
 					<id>0</id>
 					<name>get_damage_level</name>
 				</method>
+			</methods>
 		</syscall>
 		<syscall>
 			<id>0x25</id>

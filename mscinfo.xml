@@ -1,987 +1,260 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <labels>
-	<globals>
-		<global>
-			<id>1</id>
-			<name>fighterID</name>
-		</global>
-		<global>
-			<id>3</id>
-			<name>hitStopFlag</name>
-		</global>
-		<global>
-			<id>4</id>
-			<name>currentStatus</name>
-		</global>
-		<global>
-			<id>5</id>
-			<name>lastStatus</name>
-		</global>
-		<global>
-			<id>6</id>
-			<name>nextStatus</name>
-		</global>
-		<global>
-			<id>7</id>
-			<name>statusCount</name>
-		</global>
-		<global>
-			<id>9</id>
-			<name>statusFrame</name>
-		</global>
-		<global>
-			<id>10</id>
-			<name>statusFrame2</name>
-		</global>
-		<global>
-			<id>18</id>
-			<name>situationKind</name>
-		</global>
-		<global>
-			<id>19</id>
-			<name>situationKindLastFrame</name>
-		</global>
-		<global>
-			<id>20</id>
-			<name>motionFrame</name>
-		</global>
-		<global>
-			<id>32</id>
-			<name>stickY</name>
-		</global>
-		<global>
-			<id>48</id>
-			<name>stickX</name>
-		</global>
-	</globals>
-	<functions>
-		<function>
-			<id>38</id>
-			<name>sub_wait_ground_check_common_pre</name>
-		</function>
-		<function>
-			<id>39</id>
-			<name>sub_wait_ground_check_common</name>
-		</function>
-		<function>
-			<id>40</id>
-			<name>sub_air_check_fall_common_pre</name>
-		</function>
-		<function>
-			<id>41</id>
-			<name>sub_check_enable_transition</name>
-		</function>
-		<function>
-			<id>43</id>
-			<name>sub_transition_group_check_ground_special</name>
-		</function>
-		<function>
-			<id>45</id>
-			<name>sub_ground_check_throw_item</name>
-		</function>
-		<function>
-			<id>47</id>
-			<name>sub_transition_group_check_ground_attack</name>
-		</function>
-		<function>
-			<id>51</id>
-			<name>sub_transition_group_check_ground_jump</name>
-		</function>
-		<function>
-			<id>55</id>
-			<name>sub_transition_group_check_air_landing</name>
-		</function>
-		<function>
-			<id>56</id>
-			<name>sub_transition_group_check_air_cliff</name>
-		</function>
-		<function>
-			<id>58</id>
-			<name>sub_transition_group_check_air_special</name>
-		</function>
-		<function>
-			<id>59</id>
-			<name>sub_transition_group_check_air_item_throw</name>
-		</function>
-		<function>
-			<id>63</id>
-			<name>sub_transition_group_check_air_attack</name>
-		</function>
-		<function>
-			<id>67</id>
-			<name>sub_transition_group_check_air_jump_aerial</name>
-		</function>
-		<function>
-			<id>68</id>
-			<name>sub_is_fly_next</name>
-		</function>
-		<function>
-			<id>78</id>
-			<name>sub_shift_status_main</name>
-		</function>
-		<function>
-			<id>79</id>
-			<name>sub_fighter_change_status</name>
-		</function>
-		<function>
-			<id>82</id>
-			<name>sub_fighter_line_status_system</name>
-		</function>
-		<function>
-			<id>107</id>
-			<name>sub_fighter_change_motion_customize</name>
-		</function>
-		<function>
-			<id>112</id>
-			<name>sub_set_status_line_msc_common_table</name>
-		</function>
-		<function>
-			<id>113</id>
-			<name>sub_set_status_pre_msc_common_table</name>
-		</function>
-		<function>
-			<id>114</id>
-			<name>sub_set_status_main_msc_common_table</name>
-		</function>
-		<function>
-			<id>115</id>
-			<name>sub_set_status_end_msc_common_table</name>
-		</function>
-		<function>
-			<id>116</id>
-			<name>sub_set_init_status_msc_common_table</name>
-		</function>
-		<function>
-			<id>117</id>
-			<name>sub_set_exec_status_msc_common_table</name>
-		</function>
-		<function>
-			<id>118</id>
-			<name>sub_set_exec_stop_msc_common_table</name>
-		</function>
-		<function>
-			<id>119</id>
-			<name>sub_set_exit_status_msc_common_table</name>
-		</function>
-		<function>
-			<id>121</id>
-			<name>sub_set_fix_camera_msc_common_table</name>
-		</function>
-		<function>
-			<id>182</id>
-			<name>sub_cliff_robbed_uniq</name>
-		</function>
-		<function>
-			<id>203</id>
-			<name>sub_cliff_catch_move_uniq_process_init</name>
-		</function>
-		<function>
-			<id>204</id>
-			<name>sub_cliff_catch_move_uniq_process_init_common</name>
-		</function>
-		<function>
-			<id>310</id>
-			<name>sub_attack_air_common</name>
-		</function>
-		<function>
-			<id>311</id>
-			<name>sub_attack_air_kind_set_log_info</name>
-		</function>
-		<function>
-			<id>455</id>
-			<name>sub_ftStatusUniqProcessGuardFunc_updateShield</name>
-		</function>
-		<function>
-			<id>456</id>
-			<name>sub_ftStatusUniqProcessGuardFunc_setShieldScale</name>
-		</function>
-		<function>
-			<id>487</id>
-			<name>status_JumpSquat</name>
-		</function>
-		<function>
-			<id>574</id>
-			<name>status_ItemScrewJumpAerialSub</name>
-		</function>
-		<function>
-			<id>773</id>
-			<name>set_walk_motion</name>
-		</function>
-	</functions>
-	<syscalls>
-		<syscall>
-			<id>2</id>
-			<name>sv_get_mem</name>
-		</syscall>
-		<syscall>
-			<id>3</id>
-			<name>sv_set_mem</name>
-		</syscall>
-		<syscall>
-			<id>9</id>
-			<name>randint</name>
-		</syscall>
-		<syscall>
-			<id>0xa</id>
-			<name>Math</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>sqrt</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>atan2</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>exp</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>norm_vector3</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>cos</name>
-				</method>
-				<method>
-					<id>5</id>
-					<name>sin</name>
-				</method>
-				<method>
-					<id>6</id>
-					<name>randf</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>angle_difference</name>
-				</method>
-				<method>
-					<id>12</id>
-					<name>norm_vector2</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0xc</id>
-			<name>FighterUtil</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>is_body_up</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>check_cloud_through_out</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>adjust_wall</name>
-				</method>
-				<method>
-					<id>0x1e</id>
-					<name>is_hammer_status</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0xd</id>
-			<name>CameraModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0xe</id>
-			<name>ControlModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0xf</id>
-			<name>ControlModuleImplFloat</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_stick_x</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>get_stick_y</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>get_stick_prev_x</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>get_stick_prev_y</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>get_stick_angle</name>
-				</method>
-				<method>
-					<id>5</id>
-					<name>get_clatter</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>get_stick_x_unlimit</name>
-				</method>
-				<method>
-					<id>8</id>
-					<name>get_stick_y_unlimit</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x10</id>
-			<name>KineticModuleImpl</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>change_kinetic_type</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>mul_speed_all</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>clear_speed_all</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>is_enabled</name>
-				</method>
-				<method>
-					<id>6</id>
-					<name>mul_x_speed_max</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>clear_speed</name>
-				</method>
-				<method>
-					<id>8</id>
-					<name>mul_speed</name>
-				</method>
-				<method>
-					<id>0xb</id>
-					<name>enable_energy</name>
-				</method>
-				<method>
-					<id>0xc</id>
-					<name>disable_energy</name>
-				</method>
-				<method>
-					<id>0xd</id>
-					<name>set_speed_damage</name>
-				</method>
-				<method>
-					<id>0xf</id>
-					<name>set_accel</name>
-				</method>
-				<method>
-					<id>0x10</id>
-					<name>set_friction</name>
-				</method>
-				<method>
-					<id>0x11</id>
-					<name>set_speed</name>
-				</method>
-				<method>
-					<id>0x12</id>
-					<name>set_trans_mul</name>
-				</method>
-				<method>
-					<id>0x13</id>
-					<name>set_trans_lr</name>
-				</method>
-				<method>
-					<id>0x14</id>
-					<name>set_limit_speed</name>
-				</method>
-				<method>
-					<id>0x15</id>
-					<name>set_max_speed</name>
-				</method>
-				<method>
-					<id>0x16</id>
-					<name>set_controller_accel_mul</name>
-				</method>
-				<method>
-					<id>0x17</id>
-					<name>set_controller_accel_add</name>
-				</method>
-				<method>
-					<id>0x18</id>
-					<name>get_kinetic_type</name>
-				</method>
-				<method>
-					<id>0x19</id>
-					<name>add_speed</name>
-				</method>
-				<method>
-					<id>0x2714</id>
-					<name>set_limit_speed2</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x11</id>
-			<name>KineticModuleImplFloat</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_sum_speed_x</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>get_sum_speed_y</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>get_sum_speed</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>get_speed</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>get_damage_speed_x</name>
-				</method>
-				<method>
-					<id>5</id>
-					<name>get_damage_speed_y</name>
-				</method>
-				<method>
-					<id>6</id>
-					<name>get_limit_speed_x</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>get_limit_speed_y</name>
-				</method>
-				<method>
-					<id>8</id>
-					<name>get_max_speed_x</name>
-				</method>
-				<method>
-					<id>9</id>
-					<name>get_max_speed_y</name>
-				</method>
-				<method>
-					<id>0xa</id>
-					<name>get_speed_x</name>
-				</method>
-				<method>
-					<id>0xb</id>
-					<name>get_speed_y</name>
-				</method>
-				<method>
-					<id>0xf</id>
-					<name>get_friction_x</name>
-				</method>
-				<method>
-					<id>0x10</id>
-					<name>get_friction_y</name>
-				</method>
-				<method>
-					<id>0x11</id>
-					<name>get_accel_x</name>
-				</method>
-				<method>
-					<id>0x12</id>
-					<name>get_accel_y</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x12</id>
-			<name>MotionModuleImpl</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_end_frame</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>change_motion</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>set_motion_rate</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>get_motion</name>
-				</method>
-				<method>
-					<id>8</id>
-					<name>add_2nd_motion</name>
-				</method>
-				<method>
-					<id>9</id>
-					<name>remove_2nd_motion</name>
-				</method>
-				<method>
-					<id>0xa</id>
-					<name>set_weight_rate</name>
-				</method>
-				<method>
-					<id>0xc</id>
-					<name>is_exist</name>
-				</method>
-				<method>
-					<id>0x1b</id>
-					<name>turn_back</name>
-				</method>
-				<method>
-					<id>0x34</id>
-					<name>set_2nd_frame</name>
-				</method>
-				<method>
-					<id>0x2712</id>
-					<name>is_end</name>
-				</method>
-				<method>
-					<id>0x2713</id>
-					<name>set_frame</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x13</id>
-			<name>MotionModuleImplFloat</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_transn_translate_end_frame</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>get_frame</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>get_prev_weight</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x14</id>
-			<name>PostureModuleImpl</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>set_lr</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>reverse_lr</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>update_rot_y</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>set_pos</name>
-				</method>
-				<method>
-					<id>4</id>
-					<name>set_rot</name>
-				</method>
-				<method>
-					<id>5</id>
-					<name>set_stick_lr</name>
-				</method>
-				<method>
-					<id>0x2713</id>
-					<name>set_scale</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x15</id>
-			<name>PostureModuleImplFloat</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_lr</name>
-				</method>
-				<method>
-					<id>1</id>
-					<name>get_pos_x</name>
-				</method>
-				<method>
-					<id>2</id>
-					<name>get_pos_y</name>
-				</method>
-				<method>
-					<id>3</id>
-					<name>get_pos_z</name>
-				</method>
-				<method>
-					<id>7</id>
-					<name>get_scale</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x16</id>
-			<name>WorkModuleImpl</name>
-			<methods>
-				<method>
-					<id>0x0</id>
-					<name>set_float</name>
-				</method>
-				<method>
-					<id>0x1</id>
-					<name>set_rand_float</name>
-				</method>
-				<method>
-					<id>0x2</id>
-					<name>add_float</name>
-				</method>
-				<method>
-					<id>0x3</id>
-					<name>sub_float</name>
-				</method>
-				<method>
-					<id>0x4</id>
-					<name>mul_float</name>
-				</method>
-				<method>
-					<id>0x5</id>
-					<name>div_float</name>
-				</method>
-				<method>
-					<id>0x6</id>
-					<name>get_int</name>
-				</method>
-				<method>
-					<id>0x7</id>
-					<name>set_int</name>
-				</method>
-				<method>
-					<id>0x8</id>
-					<name>set_rand_int</name>
-				</method>
-				<method>
-					<id>0x9</id>
-					<name>inc_int</name>
-				</method>
-				<method>
-					<id>0xa</id>
-					<name>dec_int</name>
-				</method>
-				<method>
-					<id>0xb</id>
-					<name>add_int</name>
-				</method>
-				<method>
-					<id>0xc</id>
-					<name>sub_int</name>
-				</method>
-				<method>
-					<id>0xd</id>
-					<name>mul_int</name>
-				</method>
-				<method>
-					<id>0xe</id>
-					<name>div_int</name>
-				</method>
-				<method>
-					<id>0xf</id>
-					<name>count_down_int</name>
-					<summary>Decrements an int variable and returns true if it reaches 0</summary>
-				</method>
-				<method>
-					<id>0x10</id>
-					<name>is_flag</name>
-				</method>
-				<method>
-					<id>0x11</id>
-					<name>on_flag</name>
-				</method>
-				<method>
-					<id>0x12</id>
-					<name>off_flag</name>
-				</method>
-				<method>
-					<id>0x13</id>
-					<name>set_flag</name>
-					<summary>Sets a flag on or off</summary>
-				</method>
-				<method>
-					<id>0x14</id>
-					<name>check_off_flag</name>
-					<summary>Returns if a flag is on; if so, sets the flag to off</summary>
-				</method>
-				<method>
-					<id>0x15</id>
-					<name>check_strans</name>
-				</method>
-				<method>
-					<id>0x16</id>
-					<name>strans_on</name>
-				</method>
-				<method>
-					<id>0x17</id>
-					<name>strans_off</name>
-				</method>
-				<method>
-					<id>0x18</id>
-					<name>clear_all</name>
-					<summary>Resets an entire variable group to 0</summary>
-				</method>
-				<method>
-					<id>0x19</id>
-					<name>strans_group_on</name>
-				</method>
-				<method>
-					<id>0x1a</id>
-					<name>strans_group_off</name>
-				</method>
-				<method>
-					<id>0x1c</id>
-					<name>check_strans_group</name>
-				</method>
-				<method>
-					<id>0x1d</id>
-					<name>disable_strans</name>
-				</method>
-				<method>
-					<id>0x1e</id>
-					<name>enable_strans</name>
-				</method>
-				<method>
-					<id>0x1f</id>
-					<name>disable_strans_group</name>
-				</method>
-				<method>
-					<id>0x20</id>
-					<name>enable_strans_group</name>
-				</method>
-				<method>
-					<id>0x2710</id>
-					<name>on_flag2</name>
-				</method>
-				<method>
-					<id>0x2711</id>
-					<name>off_flag2</name>
-				</method>
-				<method>
-					<id>0x2712</id>
-					<name>is_flag2</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x17</id>
-			<name>WorkModuleImplFloat</name>
-			<methods>
-				<method>
-					<id>0x0</id>
-					<name>get_float</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x18</id>
-			<name>StatusModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x19</id>
-			<name>SlopeModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x1a</id>
-			<name>GroundModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x1b</id>
-			<name>GroundModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x1c</id>
-			<name>EffectModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x1d</id>
-			<name>EffectModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x1e</id>
-			<name>SoundModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x20</id>
-			<name>ArticleModuleImpl</name>
-			<methods>
-				<method>
-					<id>0x2710</id>
-					<name>generate</name>
-				</method>
-				<method>
-					<id>0x2712</id>
-					<name>remove</name>
-				</method>
-				<method>
-					<id>0x2717</id>
-					<name>is_exist</name>
-				</method>
-				<method>
-					<id>0x2719</id>
-					<name>shoot</name>
-				</method>
-				<method>
-					<id>0x2727</id>
-					<name>is_generatable</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x23</id>
-			<name>CancelModuleImpl</name>
-			<methods>
-				<method>
-					<id>0x2710</id>
-					<name>enable_cancel</name>
-				</method>
-				<method>
-					<id>0x2711</id>
-					<name>disable_cancel</name>
-				</method>
-				<method>
-					<id>0x2713</id>
-					<name>is_cancelable</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x24</id>
-			<name>DamageModuleImpl</name>
-			<methods>
-				<method>
-					<id>0</id>
-					<name>get_damage_level</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x25</id>
-			<name>DamageModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x26</id>
-			<name>ComboModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x27</id>
-			<name>ModelModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x28</id>
-			<name>ModelModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x29</id>
-			<name>JostleModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x2a</id>
-			<name>LinkModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x2b</id>
-			<name>LinkModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x2c</id>
-			<name>StageData</name>
-		</syscall>
-		<syscall>
-			<id>0x2d</id>
-			<name>HitModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x2e</id>
-			<name>AttackModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x2f</id>
-			<name>AttackModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x30</id>
-			<name>StopModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x33</id>
-			<name>BattleObjectParam</name>
-		</syscall>
-		<syscall>
-			<id>0x34</id>
-			<name>BattleObjectParamFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x36</id>
-			<name>ShieldModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x37</id>
-			<name>TurnModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x39</id>
-			<name>VisibilityModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x3c</id>
-			<name>CaptureModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x3d</id>
-			<name>CaptureModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x3e</id>
-			<name>ItemModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x3f</id>
-			<name>ItemModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x41</id>
-			<name>SoundModuleImplFloat</name>
-		</syscall>
-		<syscall>
-			<id>0x42</id>
-			<name>ColorBlendModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x44</id>
-			<name>PhysicsModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x46</id>
-			<name>AudienceManager</name>
-			<methods>
-				<method>
-					<id>0x1</id>
-					<name>check_tumult_fall_special</name>
-				</method>
-			</methods>
-		</syscall>
-		<syscall>
-			<id>0x48</id>
-			<name>ShakeModuleImpl</name>
-		</syscall>
-		<syscall>
-			<id>0x4a</id>
-			<name>ShadowModuleImpl</name>
-		</syscall>
-	</syscalls>
+  <globals>
+    <global id="1" name="fighterID" />
+    <global id="3" name="hitStopFlag" />
+    <global id="4" name="currentStatus" />
+    <global id="5" name="lastStatus" />
+    <global id="6" name="nextStatus" />
+    <global id="7" name="statusCount" />
+    <global id="9" name="statusFrame" />
+    <global id="10" name="statusFrame2" />
+    <global id="18" name="situationKind" />
+    <global id="19" name="situationKindLastFrame" />
+    <global id="20" name="motionFrame" />
+    <global id="32" name="stickY" />
+    <global id="48" name="stickX" />
+  </globals>
+  <functions>
+    <function id="38" name="sub_wait_ground_check_common_pre" />
+    <function id="39" name="sub_wait_ground_check_common" />
+    <function id="40" name="sub_air_check_fall_common_pre" />
+    <function id="41" name="sub_check_enable_transition" />
+    <function id="43" name="sub_transition_group_check_ground_special" />
+    <function id="45" name="sub_ground_check_throw_item" />
+    <function id="47" name="sub_transition_group_check_ground_attack" />
+    <function id="51" name="sub_transition_group_check_ground_jump" />
+    <function id="55" name="sub_transition_group_check_air_landing" />
+    <function id="56" name="sub_transition_group_check_air_cliff" />
+    <function id="58" name="sub_transition_group_check_air_special" />
+    <function id="59" name="sub_transition_group_check_air_item_throw" />
+    <function id="63" name="sub_transition_group_check_air_attack" />
+    <function id="67" name="sub_transition_group_check_air_jump_aerial" />
+    <function id="68" name="sub_is_fly_next" />
+    <function id="78" name="sub_shift_status_main" />
+    <function id="79" name="sub_fighter_change_status" />
+    <function id="82" name="sub_fighter_line_status_system" />
+    <function id="107" name="sub_fighter_change_motion_customize" />
+    <function id="112" name="sub_set_status_line_msc_common_table" />
+    <function id="113" name="sub_set_status_pre_msc_common_table" />
+    <function id="114" name="sub_set_status_main_msc_common_table" />
+    <function id="115" name="sub_set_status_end_msc_common_table" />
+    <function id="116" name="sub_set_init_status_msc_common_table" />
+    <function id="117" name="sub_set_exec_status_msc_common_table" />
+    <function id="118" name="sub_set_exec_stop_msc_common_table" />
+    <function id="119" name="sub_set_exit_status_msc_common_table" />
+    <function id="121" name="sub_set_fix_camera_msc_common_table" />
+    <function id="182" name="sub_cliff_robbed_uniq" />
+    <function id="203" name="sub_cliff_catch_move_uniq_process_init" />
+    <function id="204" name="sub_cliff_catch_move_uniq_process_init_common" />
+    <function id="310" name="sub_attack_air_common" />
+    <function id="311" name="sub_attack_air_kind_set_log_info" />
+    <function id="455" name="sub_ftStatusUniqProcessGuardFunc_updateShield" />
+    <function id="456" name="sub_ftStatusUniqProcessGuardFunc_setShieldScale" />
+    <function id="487" name="status_JumpSquat" />
+    <function id="574" name="status_ItemScrewJumpAerialSub" />
+    <function id="773" name="set_walk_motion" />
+  </functions>
+  <syscalls>
+    <syscall id="2" name="sv_get_mem" />
+    <syscall id="3" name="sv_set_mem" />
+    <syscall id="9" name="randint" />
+    <syscall id="0xa" name="Math">
+      <method id="0" name="sqrt" />
+      <method id="1" name="atan2" />
+      <method id="2" name="exp" />
+      <method id="3" name="norm_vector3" />
+      <method id="4" name="cos" />
+      <method id="5" name="sin" />
+      <method id="6" name="randf" />
+      <method id="7" name="angle_difference" />
+      <method id="12" name="norm_vector2" />
+    </syscall>
+    <syscall id="0xc" name="FighterUtil">
+      <method id="0" name="is_body_up" />
+      <method id="2" name="check_cloud_through_out" />
+      <method id="3" name="adjust_wall" />
+      <method id="0x1e" name="is_hammer_status" />
+    </syscall>
+    <syscall id="0xd" name="CameraModuleImpl" />
+    <syscall id="0xe" name="ControlModuleImpl" />
+    <syscall id="0xf" name="ControlModuleImplFloat">
+      <method id="0" name="get_stick_x" />
+      <method id="1" name="get_stick_y" />
+      <method id="2" name="get_stick_prev_x" />
+      <method id="3" name="get_stick_prev_y" />
+      <method id="4" name="get_stick_angle" />
+      <method id="5" name="get_clatter" />
+      <method id="7" name="get_stick_x_unlimit" />
+      <method id="8" name="get_stick_y_unlimit" />
+    </syscall>
+    <syscall id="0x10" name="KineticModuleImpl">
+      <method id="0" name="change_kinetic_type" />
+      <method id="1" name="mul_speed_all" />
+      <method id="3" name="clear_speed_all" />
+      <method id="4" name="is_enabled" />
+      <method id="6" name="mul_x_speed_max" />
+      <method id="7" name="clear_speed" />
+      <method id="8" name="mul_speed" />
+      <method id="0xb" name="enable_energy" />
+      <method id="0xc" name="disable_energy" />
+      <method id="0xd" name="set_speed_damage" />
+      <method id="0xf" name="set_accel" />
+      <method id="0x10" name="set_friction" />
+      <method id="0x11" name="set_speed" />
+      <method id="0x12" name="set_trans_mul" />
+      <method id="0x13" name="set_trans_lr" />
+      <method id="0x14" name="set_limit_speed" />
+      <method id="0x15" name="set_max_speed" />
+      <method id="0x16" name="set_controller_accel_mul" />
+      <method id="0x17" name="set_controller_accel_add" />
+      <method id="0x18" name="get_kinetic_type" />
+      <method id="0x19" name="add_speed" />
+      <method id="0x2714" name="set_limit_speed2" />
+    </syscall>
+    <syscall id="0x11" name="KineticModuleImplFloat">
+      <method id="0" name="get_sum_speed_x" />
+      <method id="1" name="get_sum_speed_y" />
+      <method id="2" name="get_sum_speed" />
+      <method id="3" name="get_speed" />
+      <method id="4" name="get_damage_speed_x" />
+      <method id="5" name="get_damage_speed_y" />
+      <method id="6" name="get_limit_speed_x" />
+      <method id="7" name="get_limit_speed_y" />
+      <method id="8" name="get_max_speed_x" />
+      <method id="9" name="get_max_speed_y" />
+      <method id="0xa" name="get_speed_x" />
+      <method id="0xb" name="get_speed_y" />
+      <method id="0xf" name="get_friction_x" />
+      <method id="0x10" name="get_friction_y" />
+      <method id="0x11" name="get_accel_x" />
+      <method id="0x12" name="get_accel_y" />
+    </syscall>
+    <syscall id="0x12" name="MotionModuleImpl">
+      <method id="0" name="get_end_frame" />
+      <method id="3" name="change_motion" />
+      <method id="4" name="set_motion_rate" />
+      <method id="7" name="get_motion" />
+      <method id="8" name="add_2nd_motion" />
+      <method id="9" name="remove_2nd_motion" />
+      <method id="0xa" name="set_weight_rate" />
+      <method id="0xc" name="is_exist" />
+      <method id="0x1b" name="turn_back" />
+      <method id="0x34" name="set_2nd_frame" />
+      <method id="0x2712" name="is_end" />
+      <method id="0x2713" name="set_frame" />
+    </syscall>
+    <syscall id="0x13" name="MotionModuleImplFloat">
+      <method id="0" name="get_transn_translate_end_frame" />
+      <method id="1" name="get_frame" />
+      <method id="2" name="get_prev_weight" />
+    </syscall>
+    <syscall id="0x14" name="PostureModuleImpl">
+      <method id="0" name="set_lr" />
+      <method id="1" name="reverse_lr" />
+      <method id="2" name="update_rot_y" />
+      <method id="3" name="set_pos" />
+      <method id="4" name="set_rot" />
+      <method id="5" name="set_stick_lr" />
+      <method id="0x2713" name="set_scale" />
+    </syscall>
+    <syscall id="0x15" name="PostureModuleImplFloat">
+      <method id="0" name="get_lr" />
+      <method id="1" name="get_pos_x" />
+      <method id="2" name="get_pos_y" />
+      <method id="3" name="get_pos_z" />
+      <method id="7" name="get_scale" />
+    </syscall>
+    <syscall id="0x16" name="WorkModuleImpl">
+      <method id="0x0" name="set_float" />
+      <method id="0x1" name="set_rand_float" />
+      <method id="0x2" name="add_float" />
+      <method id="0x3" name="sub_float" />
+      <method id="0x4" name="mul_float" />
+      <method id="0x5" name="div_float" />
+      <method id="0x6" name="get_int" />
+      <method id="0x7" name="set_int" />
+      <method id="0x8" name="set_rand_int" />
+      <method id="0x9" name="inc_int" />
+      <method id="0xa" name="dec_int" />
+      <method id="0xb" name="add_int" />
+      <method id="0xc" name="sub_int" />
+      <method id="0xd" name="mul_int" />
+      <method id="0xe" name="div_int" />
+      <method id="0xf" name="count_down_int" />
+      <method id="0x10" name="is_flag" />
+      <method id="0x11" name="on_flag" />
+      <method id="0x12" name="off_flag" />
+      <method id="0x13" name="set_flag" />
+      <method id="0x14" name="check_off_flag" />
+      <method id="0x15" name="check_strans" />
+      <method id="0x16" name="strans_on" />
+      <method id="0x17" name="strans_off" />
+      <method id="0x18" name="clear_all" />
+      <method id="0x19" name="strans_group_on" />
+      <method id="0x1a" name="strans_group_off" />
+      <method id="0x1c" name="check_strans_group" />
+      <method id="0x1d" name="disable_strans" />
+      <method id="0x1e" name="enable_strans" />
+      <method id="0x1f" name="disable_strans_group" />
+      <method id="0x20" name="enable_strans_group" />
+      <method id="0x2710" name="on_flag2" />
+      <method id="0x2711" name="off_flag2" />
+      <method id="0x2712" name="is_flag2" />
+    </syscall>
+    <syscall id="0x17" name="WorkModuleImplFloat">
+      <method id="0x0" name="get_float" />
+    </syscall>
+    <syscall id="0x18" name="StatusModuleImpl" />
+    <syscall id="0x19" name="SlopeModuleImpl" />
+    <syscall id="0x1a" name="GroundModuleImpl" />
+    <syscall id="0x1b" name="GroundModuleImplFloat" />
+    <syscall id="0x1c" name="EffectModuleImpl" />
+    <syscall id="0x1d" name="EffectModuleImplFloat" />
+    <syscall id="0x1e" name="SoundModuleImpl" />
+    <syscall id="0x20" name="ArticleModuleImpl">
+      <method id="0x2710" name="generate" />
+      <method id="0x2712" name="remove" />
+      <method id="0x2717" name="is_exist" />
+      <method id="0x2719" name="shoot" />
+      <method id="0x2727" name="is_generatable" />
+    </syscall>
+    <syscall id="0x23" name="CancelModuleImpl">
+      <method id="0x2710" name="enable_cancel" />
+      <method id="0x2711" name="disable_cancel" />
+      <method id="0x2713" name="is_cancelable" />
+    </syscall>
+    <syscall id="0x24" name="DamageModuleImpl">
+      <method id="0" name="get_damage_level" />
+    </syscall>
+    <syscall id="0x25" name="DamageModuleImplFloat" />
+    <syscall id="0x26" name="ComboModuleImpl" />
+    <syscall id="0x27" name="ModelModuleImpl" />
+    <syscall id="0x28" name="ModelModuleImplFloat" />
+    <syscall id="0x29" name="JostleModuleImpl" />
+    <syscall id="0x2a" name="LinkModuleImpl" />
+    <syscall id="0x2b" name="LinkModuleImplFloat" />
+    <syscall id="0x2c" name="StageData" />
+    <syscall id="0x2d" name="HitModuleImpl" />
+    <syscall id="0x2e" name="AttackModuleImpl" />
+    <syscall id="0x2f" name="AttackModuleImplFloat" />
+    <syscall id="0x30" name="StopModuleImpl" />
+    <syscall id="0x33" name="BattleObjectParam" />
+    <syscall id="0x34" name="BattleObjectParamFloat" />
+    <syscall id="0x36" name="ShieldModuleImpl" />
+    <syscall id="0x37" name="TurnModuleImpl" />
+    <syscall id="0x39" name="VisibilityModuleImpl" />
+    <syscall id="0x3c" name="CaptureModuleImpl" />
+    <syscall id="0x3d" name="CaptureModuleImplFloat" />
+    <syscall id="0x3e" name="ItemModuleImpl" />
+    <syscall id="0x3f" name="ItemModuleImplFloat" />
+    <syscall id="0x41" name="SoundModuleImplFloat" />
+    <syscall id="0x42" name="ColorBlendModuleImpl" />
+    <syscall id="0x44" name="PhysicsModuleImpl" />
+    <syscall id="0x46" name="AudienceManager">
+      <method id="0x1" name="check_tumult_fall_special" />
+    </syscall>
+    <syscall id="0x48" name="ShakeModuleImpl" />
+    <syscall id="0x4a" name="ShadowModuleImpl" />
+  </syscalls>
 </labels>

@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <labels>
   <globals>
-    <global id="1" name="fighterID" />
-    <global id="3" name="hitStopFlag" />
-    <global id="4" name="currentStatus" />
-    <global id="5" name="lastStatus" />
-    <global id="6" name="nextStatus" />
-    <global id="7" name="statusCount" />
-    <global id="9" name="statusFrame" />
-    <global id="10" name="statusFrame2" />
-    <global id="18" name="situationKind" />
-    <global id="19" name="situationKindLastFrame" />
-    <global id="20" name="motionFrame" />
-    <global id="32" name="stickY" />
-    <global id="48" name="stickX" />
+    <global id="0" name="object_category" />
+    <global id="1" name="object_kind" />
+    <global id="3" name="is_skip" />
+    <global id="4" name="status" />
+    <global id="5" name="status_prev" />
+    <global id="6" name="status_next" />
+    <global id="7" name="status_count" />
+    <global id="9" name="status_frame" />
+    <global id="10" name="status_frame2" />
+    <global id="18" name="situation_kind" />
+    <global id="19" name="situation_kind_last_frame" />
+    <global id="20" name="motion_frame" />
+    <global id="24" name="pad_cmd_flags_cat1"/>
+    <global id="29" name="pad_cmd_flags_cat3"/>
+    <global id="31" name="pad_cmd_flags_cat2"/>
+    <global id="32" name="stick_y" />
+    <global id="38" name="pad_flags"/>
+    <global id="45" name="pad_cmd_flags_cat4"/>
+    <global id="48" name="stick_x" />
   </globals>
   <functions>
     <function id="38" name="sub_wait_ground_check_common_pre" />
@@ -58,17 +64,17 @@
   <syscalls>
     <syscall id="2" name="sv_get_mem" />
     <syscall id="3" name="sv_set_mem" />
-    <syscall id="9" name="randint" />
-    <syscall id="0xa" name="Math">
+    <syscall id="9" name="randi" />
+    <syscall id="0xa" name="MathF">
       <method id="0" name="sqrt" />
       <method id="1" name="atan2" />
-      <method id="2" name="exp" />
-      <method id="3" name="norm_vector3" />
+      <method id="2" name="pow" />
+      <method id="3" name="vec3_length" />
       <method id="4" name="cos" />
       <method id="5" name="sin" />
       <method id="6" name="randf" />
-      <method id="7" name="angle_difference" />
-      <method id="12" name="norm_vector2" />
+      <method id="7" name="angle_diff" />
+      <method id="12" name="vec2_length" />
     </syscall>
     <syscall id="0xc" name="FighterUtil">
       <method id="0" name="is_body_up" />
@@ -76,20 +82,31 @@
       <method id="3" name="adjust_wall" />
       <method id="0x1e" name="is_hammer_status" />
     </syscall>
-    <syscall id="0xd" name="CameraModuleImpl" />
-    <syscall id="0xe" name="ControlModuleImpl" />
-    <syscall id="0xf" name="ControlModuleImplFloat">
-      <method id="0" name="get_stick_x" />
-      <method id="1" name="get_stick_y" />
-      <method id="2" name="get_stick_prev_x" />
-      <method id="3" name="get_stick_prev_y" />
-      <method id="4" name="get_stick_angle" />
-      <method id="5" name="get_clatter" />
-      <method id="7" name="get_stick_x_unlimit" />
-      <method id="8" name="get_stick_y_unlimit" />
+    <syscall id="0xd" name="CameraModule" />
+    <syscall id="0xe" name="ControlModule">
+      <method id="9" name="get_pad_flag" />
+      <method id="10" name="get_command_flag_cat" />
+      <method id="11" name="exec_command" />
+      <method id="12" name="is_clear_command" />
+      <method id="16" name="get_attack_air_kind"/>
+      <method id="25" name="set_rumble"/>
+      <method id="10000" name="check_button_trigger"/>
+      <method id="10002" name="check_button_on"/>
+      <method id="10003" name="check_button_off"/>
+      <method id="10012" name="is_enable_flick_jump"/>
     </syscall>
-    <syscall id="0x10" name="KineticModuleImpl">
-      <method id="0" name="change_kinetic_type" />
+    <syscall id="0xf" name="ControlModuleF">
+      <method id="0" name="stick_x" />
+      <method id="1" name="stick_y" />
+      <method id="2" name="stick_x_prev" />
+      <method id="3" name="stick_y_prev" />
+      <method id="4" name="stick_angle" />
+      <method id="5" name="clatter_time" />
+      <method id="7" name="stick_x_no_clamp" />
+      <method id="8" name="stick_y_no_clamp" />
+    </syscall>
+    <syscall id="0x10" name="KineticModule">
+      <method id="0" name="set_kinetic_type" />
       <method id="1" name="mul_speed_all" />
       <method id="3" name="clear_speed_all" />
       <method id="4" name="is_enabled" />
@@ -112,7 +129,7 @@
       <method id="0x19" name="add_speed" />
       <method id="0x2714" name="set_limit_speed2" />
     </syscall>
-    <syscall id="0x11" name="KineticModuleImplFloat">
+    <syscall id="0x11" name="KineticModuleF">
       <method id="0" name="get_sum_speed_x" />
       <method id="1" name="get_sum_speed_y" />
       <method id="2" name="get_sum_speed" />
@@ -130,7 +147,7 @@
       <method id="0x11" name="get_accel_x" />
       <method id="0x12" name="get_accel_y" />
     </syscall>
-    <syscall id="0x12" name="MotionModuleImpl">
+    <syscall id="0x12" name="MotionModule">
       <method id="0" name="get_end_frame" />
       <method id="3" name="change_motion" />
       <method id="4" name="set_motion_rate" />
@@ -144,12 +161,12 @@
       <method id="0x2712" name="is_end" />
       <method id="0x2713" name="set_frame" />
     </syscall>
-    <syscall id="0x13" name="MotionModuleImplFloat">
+    <syscall id="0x13" name="MotionModuleF">
       <method id="0" name="get_transn_translate_end_frame" />
       <method id="1" name="get_frame" />
       <method id="2" name="get_prev_weight" />
     </syscall>
-    <syscall id="0x14" name="PostureModuleImpl">
+    <syscall id="0x14" name="PostureModule">
       <method id="0" name="set_lr" />
       <method id="1" name="reverse_lr" />
       <method id="2" name="update_rot_y" />
@@ -158,14 +175,14 @@
       <method id="5" name="set_stick_lr" />
       <method id="0x2713" name="set_scale" />
     </syscall>
-    <syscall id="0x15" name="PostureModuleImplFloat">
+    <syscall id="0x15" name="PostureModuleF">
       <method id="0" name="get_lr" />
       <method id="1" name="get_pos_x" />
       <method id="2" name="get_pos_y" />
       <method id="3" name="get_pos_z" />
       <method id="7" name="get_scale" />
     </syscall>
-    <syscall id="0x16" name="WorkModuleImpl">
+    <syscall id="0x16" name="WorkModule">
       <method id="0x0" name="set_float" />
       <method id="0x1" name="set_rand_float" />
       <method id="0x2" name="add_float" />
@@ -202,59 +219,71 @@
       <method id="0x2711" name="off_flag2" />
       <method id="0x2712" name="is_flag2" />
     </syscall>
-    <syscall id="0x17" name="WorkModuleImplFloat">
+    <syscall id="0x17" name="WorkModuleF">
       <method id="0x0" name="get_float" />
     </syscall>
-    <syscall id="0x18" name="StatusModuleImpl" />
-    <syscall id="0x19" name="SlopeModuleImpl" />
-    <syscall id="0x1a" name="GroundModuleImpl" />
-    <syscall id="0x1b" name="GroundModuleImplFloat" />
-    <syscall id="0x1c" name="EffectModuleImpl" />
-    <syscall id="0x1d" name="EffectModuleImplFloat" />
-    <syscall id="0x1e" name="SoundModuleImpl" />
-    <syscall id="0x20" name="ArticleModuleImpl">
+    <syscall id="0x18" name="StatusModule" />
+    <syscall id="0x19" name="SlopeModule" />
+    <syscall id="0x1a" name="GroundModule" />
+    <syscall id="0x1b" name="GroundModuleF" />
+    <syscall id="0x1c" name="EffectModule" />
+    <syscall id="0x1d" name="EffectModuleF" />
+    <syscall id="0x1e" name="SoundModule" />
+    <syscall id="0x20" name="ArticleModule">
       <method id="0x2710" name="generate" />
       <method id="0x2712" name="remove" />
       <method id="0x2717" name="is_exist" />
       <method id="0x2719" name="shoot" />
       <method id="0x2727" name="is_generatable" />
     </syscall>
-    <syscall id="0x23" name="CancelModuleImpl">
+    <syscall id="0x21" name="BattleObject"/>
+    <syscall id="0x23" name="CancelModule">
       <method id="0x2710" name="enable_cancel" />
       <method id="0x2711" name="disable_cancel" />
       <method id="0x2713" name="is_cancelable" />
     </syscall>
-    <syscall id="0x24" name="DamageModuleImpl">
+    <syscall id="0x24" name="DamageModule">
       <method id="0" name="get_damage_level" />
     </syscall>
-    <syscall id="0x25" name="DamageModuleImplFloat" />
-    <syscall id="0x26" name="ComboModuleImpl" />
-    <syscall id="0x27" name="ModelModuleImpl" />
-    <syscall id="0x28" name="ModelModuleImplFloat" />
-    <syscall id="0x29" name="JostleModuleImpl" />
-    <syscall id="0x2a" name="LinkModuleImpl" />
-    <syscall id="0x2b" name="LinkModuleImplFloat" />
+    <syscall id="0x25" name="DamageModuleF" />
+    <syscall id="0x26" name="ComboModule" />
+    <syscall id="0x27" name="ModelModule" />
+    <syscall id="0x28" name="ModelModuleF" />
+    <syscall id="0x29" name="AreaModule" />
+    <syscall id="0x2a" name="LinkModule" />
+    <syscall id="0x2b" name="LinkModuleF" />
     <syscall id="0x2c" name="StageData" />
-    <syscall id="0x2d" name="HitModuleImpl" />
-    <syscall id="0x2e" name="AttackModuleImpl" />
-    <syscall id="0x2f" name="AttackModuleImplFloat" />
-    <syscall id="0x30" name="StopModuleImpl" />
+    <syscall id="0x2d" name="HitModule" />
+    <syscall id="0x2e" name="AttackModule" />
+    <syscall id="0x2f" name="AttackModuleF" />
+    <syscall id="0x30" name="StopModule" />
+    <syscall id="0x31" name="SearchModule" />
     <syscall id="0x33" name="BattleObjectParam" />
     <syscall id="0x34" name="BattleObjectParamFloat" />
-    <syscall id="0x36" name="ShieldModuleImpl" />
-    <syscall id="0x37" name="TurnModuleImpl" />
-    <syscall id="0x39" name="VisibilityModuleImpl" />
-    <syscall id="0x3c" name="CaptureModuleImpl" />
-    <syscall id="0x3d" name="CaptureModuleImplFloat" />
-    <syscall id="0x3e" name="ItemModuleImpl" />
-    <syscall id="0x3f" name="ItemModuleImplFloat" />
-    <syscall id="0x41" name="SoundModuleImplFloat" />
-    <syscall id="0x42" name="ColorBlendModuleImpl" />
-    <syscall id="0x44" name="PhysicsModuleImpl" />
+    <syscall id="0x36" name="ShieldModule" />
+    <syscall id="0x37" name="TurnModule" />
+    <syscall id="0x38" name="TeamModule"/>
+    <syscall id="0x39" name="VisibilityModule" />
+    <syscall id="0x3a" name="GrabModule" />
+    <syscall id="0x3b" name="CatchModule" />
+    <syscall id="0x3c" name="CaptureModule" />
+    <syscall id="0x3d" name="CaptureModuleF" />
+    <syscall id="0x3e" name="ItemModule" />
+    <syscall id="0x3f" name="ItemModuleF" />
+    <syscall id="0x41" name="SoundModuleF" />
+    <syscall id="0x42" name="ColorBlendModule" />
+    <syscall id="0x42" name="ColorBlendModuleF" />
+    <syscall id="0x44" name="PhysicsModule" />
+    <syscall id="0x45" name="BattleObjectF"/>
     <syscall id="0x46" name="AudienceManager">
       <method id="0x1" name="check_tumult_fall_special" />
     </syscall>
-    <syscall id="0x48" name="ShakeModuleImpl" />
-    <syscall id="0x4a" name="ShadowModuleImpl" />
+    <syscall id="0x47" name="JostleModule"/>
+    <syscall id="0x48" name="ShakeModule" />
+    <syscall id="0x49" name="SlowModule"/>
+    <syscall id="0x4a" name="ShadowModule" />
+    <syscall id="0x4b" name="MotionAnimcmdModule"/>
+    <syscall id="0x4c" name="SlowModuleF"/>
+    <syscall id="0x4d" name="SlopeModuleF"/>
   </syscalls>
 </labels>
